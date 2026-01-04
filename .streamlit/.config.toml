@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#0066CC"           # Główny niebieski (przyciski, suwaki)
+backgroundColor = "#FFFFFF"        # Czysta biel tła
+secondaryBackgroundColor = "#F0F7FF" # Bardzo jasny błękit (pasek boczny)
+textColor = "#0F172A"              # Ciemny granat (tekst)
+font = "sans serif"
