@@ -5,14 +5,14 @@
 ![Folium](https://img.shields.io/badge/Folium-77B829?style=for-the-badge&logo=leaflet&logoColor=white)
 ![Open-Meteo](https://img.shields.io/badge/API-Open--Meteo-orange?style=for-the-badge)
 
-## 📌 O projekcie
+## O projekcie
 **Solar Invest** to aplikacja typu *Rapid Data Science & GIS*, służąca do kompleksowej analizy opłacalności instalacji fotowoltaicznych w dowolnym miejscu na świecie. System integruje dane satelitarne, interaktywne mapy oraz zaawansowany model finansowy zgodny z systemem **Net-Billing**.
 
 Projekt został zrealizowany jako część zaliczenia przedmiotu **Inżynieria Oprogramowania**. Celem było stworzenie funkcjonalnego prototypu (MVP) bez konieczności pisania dedykowanego frontendu (HTML/JS), wykorzystując podejście *Low-Code* w Pythonie.
 
 ---
 
-## 🚀 Główne Funkcjonalności
+## Główne Funkcjonalności
 
 ### 1. Analiza Geoprzestrzenna (GIS)
 * **Interaktywna Mapa:** Wykorzystanie biblioteki `Folium` do wizualizacji lokalizacji.
@@ -33,7 +33,7 @@ Aplikacja zawiera autorski algorytm `calculate_roi_advanced`, który uwzględnia
 
 ---
 
-## 🛠️ Stos Technologiczny (Tech Stack)
+## Stos Technologiczny (Tech Stack)
 
 | Komponent | Technologia | Zastosowanie |
 |-----------|-------------|--------------|
@@ -45,7 +45,7 @@ Aplikacja zawiera autorski algorytm `calculate_roi_advanced`, który uwzględnia
 
 ---
 
-## 💻 Jak uruchomić projekt lokalnie?
+## Jak uruchomić projekt lokalnie?
 
 Aby uruchomić aplikację na własnym komputerze, wykonaj następujące kroki:
 
@@ -61,14 +61,14 @@ Bash
 python -m streamlit run app2.py
 Aplikacja otworzy się automatycznie w przeglądarce pod adresem http://localhost:8501.
 
-📂 Struktura Plików
+Struktura Plików
 app2.py - Główny plik aplikacji (Production Ready).
 analiza-projekt.ipynb - Notatnik Jupyter z analizą wstępną i testami API (Development).
 requirements.txt - Lista zależności projektowych.
 .streamlit/config.toml - Konfiguracja motywu graficznego (kolory, fonty).
 
-👥 Autorzy
+Autorzy
 Projekt wykonany przez zespół studentów Uniwersytetu Gdańskiego:
-Julia Goska – Lead Developer & Data Analyst (Logika aplikacji, model finansowy)
-Aleksandra Buńko – GIS Specialist & Documentation (Analiza przestrzenna, prezentacja)
-© 2026 Solar Invest Project. Wszelkie prawa zastrzeżone.
+Julia Goska
+Aleksandra Buńko 
+© 2026 Solar Invest Project.
