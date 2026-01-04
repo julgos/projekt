@@ -1,4 +1,4 @@
-# ☀️ Solar Invest - System Analizy Rentowności PV
+# Solar Invest - System Analizy Rentowności PV
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
