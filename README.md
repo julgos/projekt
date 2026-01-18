@@ -92,27 +92,26 @@ Struktura Plików
 ---
 
 ## Sceniarusze testów
-## 5. Scenariusze testowe
 
-## 5. Scenariusze testowe
 
-| ID wymagania | Scenariusz testu |
-|-------------|------------------|
-| 1 | Uruchamiamy aplikację poleceniem `streamlit run app.py` i sprawdzamy, czy otwiera się ona w przeglądarce internetowej oraz czy widoczny jest główny widok aplikacji. |
-| 3 | Klikamy na mapie kolejno lokalizacje: Warszawa, Gdańsk i Kraków, a następnie sprawdzamy, czy wyświetlane wartości nasłonecznienia różnią się między lokalizacjami. |
-| 4 | Podczas standardowego działania aplikacji sprawdzamy, czy po kliknięciu lokalizacji dane są wyświetlane bez błędów i aplikacja nie przestaje działać. |
-| 5 | Sprawdzamy, czy wartość nasłonecznienia wyświetlana jest w jednostkach kWh/m², zgodnie z opisem w interfejsie. |
-| 6 | Po wykonaniu symulacji sprawdzamy, czy w pierwszym roku bilans finansowy jest ujemny (koszt inwestycji), a w kolejnych latach stopniowo rośnie. |
-| 7 | Zmieniamy wartość inflacji w panelu bocznym (np. 0% i 10%) i sprawdzamy, czy zmienia się wynik finansowy inwestycji. |
-| 8 | Zmieniamy poziom autokonsumpcji energii i obserwujemy, czy wynik finansowy inwestycji ulega zmianie. |
-| 9 | Sprawdzamy, czy aplikacja wskazuje rok, w którym bilans finansowy przechodzi z wartości ujemnej na dodatnią. |
-| 11 | Sprawdzamy, czy w panelu bocznym dostępne są pola do zmiany parametrów instalacji oraz rynku energii. |
-| 12 | Zmieniamy wartość dostępnej powierzchni dachu (np. 20 m² i 40 m²) i sprawdzamy, czy obliczona moc instalacji zmienia się odpowiednio. |
-| 14 | Sprawdzamy, czy mapa umożliwia przybliżanie, oddalanie oraz reaguje na kliknięcia użytkownika. |
-| 15 | Klikamy wybrane miejsce na mapie i sprawdzamy, czy aplikacja oblicza dane dla tej konkretnej lokalizacji. |
-| 16 | Po wyborze lokalizacji sprawdzamy, czy aplikacja wyświetla roczną produkcję energii i czy zmienia się ona po zmianie lokalizacji. |
-| 17 | Sprawdzamy, czy aplikacja wyświetla wynik finansowy inwestycji oraz rok zwrotu inwestycji w formie wskaźników. |
-| 18 | Sprawdzamy, czy po wykonaniu symulacji wyświetlany jest wykres przedstawiający zmianę skumulowanego bilansu finansowego w czasie. |
-| 2 | Sprawdzamy, czy wszystkie elementy interfejsu są czytelne, logicznie rozmieszczone i zrozumiałe dla użytkownika. |
-| 10 | Sprawdzamy, czy w kolejnych latach symulacji produkcja energii rośnie wolniej, co wskazuje na uwzględnienie spadku wydajności paneli. |
-| 13 | Zmieniamy styl mapy na standardowy, satelitarny oraz jasny i sprawdzamy, czy mapa zmienia swój wygląd. |
+
+| ID wymagania | Scenariusz testu | Status |
+|-------------|------------------|--------|
+| 1 | Uruchamiamy aplikację poleceniem `streamlit run app.py` i sprawdzamy, czy otwiera się ona w przeglądarce internetowej oraz czy widoczny jest główny widok aplikacji. | Sprawdzono |
+| 3 | Klikamy na mapie kolejno lokalizacje: Warszawa, Gdańsk i Kraków, a następnie sprawdzamy, czy wyświetlane wartości nasłonecznienia różnią się między lokalizacjami. | Sprawdzono |
+| 4 | Podczas standardowego działania aplikacji sprawdzamy, czy po kliknięciu lokalizacji dane są wyświetlane bez błędów i aplikacja nie przestaje działać. | Sprawdzono |
+| 5 | Sprawdzamy, czy wartość nasłonecznienia wyświetlana jest w jednostkach kWh/m², zgodnie z opisem w interfejsie. | Sprawdzono |
+| 6 | Po wykonaniu symulacji sprawdzamy, czy w pierwszym roku bilans finansowy jest ujemny (koszt inwestycji), a w kolejnych latach stopniowo rośnie. | Sprawdzono |
+| 7 | Zmieniamy wartość inflacji w panelu bocznym na 0% i 10% i sprawdzamy, czy zmienia się wynik finansowy inwestycji. | Sprawdzono |
+| 8 | Zmieniamy poziom autokonsumpcji energii i obserwujemy, czy wynik finansowy inwestycji ulega zmianie. | Sprawdzono |
+| 9 | Sprawdzamy, czy aplikacja wskazuje rok, w którym bilans finansowy przechodzi z wartości ujemnej na dodatnią. | Sprawdzono |
+| 11 | Sprawdzamy, czy w panelu bocznym dostępne są pola do zmiany parametrów instalacji oraz rynku energii. | Sprawdzono |
+| 12 | Zmieniamy wartość dostępnej powierzchni dachu na 20 m² i 40 m² i sprawdzamy, czy obliczona moc instalacji zmienia się odpowiednio. | Sprawdzono |
+| 14 | Sprawdzamy, czy mapa umożliwia przybliżanie, oddalanie oraz reaguje na kliknięcia użytkownika. | Sprawdzono |
+| 15 | Klikamy wybrane miejsce na mapie i sprawdzamy, czy aplikacja oblicza dane dla tej konkretnej lokalizacji. | Sprawdzono |
+| 16 | Po wyborze lokalizacji sprawdzamy, czy aplikacja wyświetla roczną produkcję energii i czy zmienia się ona po zmianie lokalizacji. | Sprawdzono |
+| 17 | Sprawdzamy, czy aplikacja wyświetla wynik finansowy inwestycji oraz rok zwrotu inwestycji w formie wskaźników. | Sprawdzono |
+| 18 | Sprawdzamy, czy po wykonaniu symulacji wyświetlany jest wykres przedstawiający zmianę skumulowanego bilansu finansowego w czasie. | Sprawdzono |
+| 2 | Sprawdzamy, czy wszystkie elementy interfejsu są czytelne, logicznie rozmieszczone i zrozumiałe dla użytkownika. | Sprawdzono |
+| 10 | Sprawdzamy, czy w kolejnych latach symulacji produkcja energii rośnie wolniej, co wskazuje na uwzględnienie spadku wydajności paneli. | Sprawdzono |
+| 13 | Zmieniamy styl mapy na standardowy, satelitarny oraz jasny i sprawdzamy, czy mapa zmienia swój wygląd. | Sprawdzono |
