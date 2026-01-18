@@ -6,45 +6,66 @@
 ![Open-Meteo](https://img.shields.io/badge/API-Open--Meteo-orange?style=for-the-badge)
 
 ## O projekcie
-**Solar Invest** to aplikacja typu *Rapid Data Science & GIS*, służąca do kompleksowej analizy opłacalności instalacji fotowoltaicznych w dowolnym miejscu na świecie. System integruje dane satelitarne, interaktywne mapy oraz zaawansowany model finansowy zgodny z systemem **Net-Billing**.
-
-Projekt został zrealizowany jako część zaliczenia przedmiotu **Inżynieria Oprogramowania**. Celem było stworzenie funkcjonalnego prototypu (MVP) bez konieczności pisania dedykowanego frontendu (HTML/JS), wykorzystując podejście *Low-Code* w Pythonie.
-
----
-
-## Główne Funkcjonalności
-
-### 1. Analiza Geoprzestrzenna (GIS)
-* **Interaktywna Mapa:** Wykorzystanie biblioteki `Folium` do wizualizacji lokalizacji.
-* **Widok Satelitarny:** Integracja z warstwą **Esri World Imagery**, umożliwiająca precyzyjną weryfikację dachu i otoczenia (cienie, drzewa).
-* **Geokodowanie:** Pobieranie współrzędnych (lat/lon) po kliknięciu myszką.
-
-### 2. Dane Satelitarne (Backend)
-* Automatyczne połączenie z **Open-Meteo API**.
-* Pobieranie historycznych danych nasłonecznienia (*shortwave_radiation_sum*) dla konkretnej lokalizacji.
-* Konwersja jednostek fizycznych ($MJ/m^2 \to kWh/m^2$).
-
-### 3. Model Inżynierski i Finansowy
-Aplikacja zawiera autorski algorytm `calculate_roi_advanced`, który uwzględnia realia rynkowe:
-* **System Net-Billing:** Rozdzielenie ceny zakupu energii (np. 1.15 PLN) od ceny sprzedaży nadwyżek (np. 0.50 PLN).
-* **Szacowanie powierzchni:** Automatyczne wyliczanie mocy instalacji na podstawie dostępnej powierzchni dachu (przelicznik $5.2 m^2/kWp$).
-* **Autokonsumpcja:** Suwak pozwalający symulować procent energii zużywanej na bieżąco.
-* **Cykl życia instalacji:** Uwzględnienie degradacji paneli (0.5% rocznie) oraz inflacji cen energii.
+**Solar Invest** jest aplikacją webową wspierającą analizę opłacalności inwestycji w instalacje fotowoltaiczne dla użytkowników indywidualnych. System umożliwia przeprowadzenie symulacji finansowej na podstawie rzeczywistych danych nasłonecznienia, parametrów technicznych instalacji oraz zmiennych rynkowych, takich jak ceny energii elektrycznej czy poziom inflacji.
+Głównym celem aplikacji jest dostarczenie użytkownikowi prostego i intuicyjnego narzędzia decyzyjnego, które pozwala oszacować roczną produkcję energii, skumulowany bilans finansowy oraz punkt zwrotu inwestycji w zadanym horyzoncie czasowym. Aplikacja wykorzystuje interaktywną mapę do wyboru lokalizacji inwestycji oraz prezentuje wyniki analizy w postaci kluczowych wskaźników efektywności (KPI) i wykresu cash flow, co umożliwia szybkie i czytelne porównanie opłacalności inwestycji.
 
 ---
+## 2. Prawa autorskie
 
-## Stos Technologiczny (Tech Stack)
+**Autorzy:**  
+Julia Goska  
+Aleksandra Buńko  
 
-| Komponent | Technologia | Zastosowanie |
-|-----------|-------------|--------------|
-| **Język** | Python 3.12 | Logika biznesowa i obliczenia |
-| **Frontend** | Streamlit | Interfejs użytkownika (UI/UX) |
-| **Mapy / GIS** | Folium | Wyświetlanie map i warstw satelitarnych |
-| **Analiza Danych** | Pandas, NumPy | Przetwarzanie szeregów czasowych i Cash Flow |
-| **Integracja API** | Requests | Komunikacja z serwerem pogodowym |
+**Warunki licencyjne:**  
+Oprogramowanie udostępniane jest na licencji otwartej MIT. Licencja ta umożliwia dalsze wykorzystanie, modyfikację oraz rozwój kodu źródłowego, w szczególności w celach edukacyjnych i akademickich, z zachowaniem informacji o autorach.
 
 ---
+## 3. Specyfikacja Wymagań
+| ID | Nazwa wymagania | Opis wymagania | Priorytet | Kategoria |
+|----|-----------------|----------------|-----------|-----------|
+| 1 | Konfiguracja aplikacji webowej | System działa jako aplikacja webowa z responsywnym interfejsem użytkownika | 1 | Pozafunkcjonalne |
+| 2 | Czytelność interfejsu | Interfejs jest spójny wizualnie i czytelny dla użytkownika | 2 | Pozafunkcjonalne |
+| 3 | Pobieranie danych nasłonecznienia | System pobiera dane promieniowania słonecznego z zewnętrznego API (Open-Meteo) | 1 | Funkcjonalne |
+| 4 | Obsługa błędów API | System zapewnia stabilne działanie w przypadku błędów komunikacji z API | 1 | Pozafunkcjonalne |
+| 5 | Konwersja jednostek | System przelicza dane promieniowania do jednostek kWh/m² | 1 | Funkcjonalne |
+| 6 | Symulacja cash flow | System symuluje skumulowany bilans finansowy inwestycji | 1 | Funkcjonalne |
+| 7 | Uwzględnienie inflacji | System uwzględnia inflację cen energii w analizie ekonomicznej | 1 | Funkcjonalne |
+| 8 | Autokonsumpcja i sprzedaż energii | System rozróżnia energię zużytą na potrzeby własne i sprzedaną do sieci | 1 | Funkcjonalne |
+| 9 | Punkt zwrotu inwestycji | System wyznacza rok osiągnięcia rentowności inwestycji | 1 | Funkcjonalne |
+| 10 | Degradacja paneli | System uwzględnia spadek wydajności paneli PV w kolejnych latach | 2 | Funkcjonalne |
+| 11 | Sidebar konfiguracyjny | System udostępnia panel boczny do konfiguracji parametrów instalacji i rynku | 1 | Funkcjonalne |
+| 12 | Obliczanie mocy instalacji | System oblicza możliwą moc instalacji na podstawie powierzchni dachu | 1 | Funkcjonalne |
+| 13 | Wybór stylu mapy | System umożliwia wybór stylu mapy (standardowa, satelitarna, jasna) | 2 | Funkcjonalne |
+| 14 | Interaktywna mapa | System prezentuje interaktywną mapę lokalizacji inwestycji | 1 | Funkcjonalne |
+| 15 | Wybór lokalizacji | System umożliwia wybór lokalizacji poprzez kliknięcie na mapie | 1 | Funkcjonalne |
+| 16 | Estymacja rocznej produkcji energii | System oblicza roczną produkcję energii instalacji PV | 1 | Funkcjonalne |
+| 17 | Prezentacja kluczowych wskaźników efektywności (KPI) | System prezentuje kluczowe wskaźniki efektywności (KPI) | 1 | Funkcjonalne |
+| 18 | Wykres cash flow | System wizualizuje przebieg skumulowanego bilansu finansowego | 1 | Funkcjonalne |
+| 19 | Wpisanie adresu lokalizacji | System może określać dokładny adres na podstawie współrzędnych | 3 | Funkcjonalne |
+| 20 | Eksport wyników do PDF | System może umożliwiać eksport wyników analizy do pliku | 3 | Funkcjonalne |
 
+---
+## 4. Architektura systemu
+
+### 4.1 Architektura rozwoju (stos technologiczny)
+
+- **Visual Studio Code / Jupyter Lab** – środowiska programistyczne wykorzystywane do tworzenia, testowania i analizy kodu źródłowego.
+- **Python 3.12.1** – główny język programowania użyty do implementacji logiki aplikacji.
+- **Biblioteki Python**:
+  - `pandas` – analiza i przetwarzanie danych,
+  - `numpy` – obliczenia matematyczne,
+  - `requests` – obsługa komunikacji z zewnętrznym API,
+  - `streamlit` – budowa interfejsu oraz wizualizacja danych,
+  - `folium`, `streamlit-folium` – obsługa interaktywnej mapy.
+
+### 4.2 Architektura uruchomieniowa
+
+- **Streamlit 1.52.2** – framework odpowiedzialny za uruchomienie aplikacji oraz renderowanie interfejsu webowego.
+- **Folium / Streamlit-Folium** – moduły odpowiedzialne za prezentację mapy oraz wybór lokalizacji inwestycji.
+- **Open-Meteo API** – zewnętrzne źródło danych meteorologicznych, dostarczające dane o nasłonecznieniu w formacie JSON.
+- **Aplikacja Python** – moduł obliczeniowy realizujący estymację produkcji energii oraz analizę ekonomiczną inwestycji.
+
+---
 ## Jak uruchomić projekt lokalnie?
 
 Aby uruchomić aplikację na własnym komputerze, wykonaj następujące kroki:
@@ -67,8 +88,4 @@ analiza-projekt.ipynb - Notatnik Jupyter z analizą wstępną i testami API (Dev
 requirements.txt - Lista zależności projektowych.
 .streamlit/config.toml - Konfiguracja motywu graficznego (kolory, fonty).
 
-Autorzy
-Projekt wykonany przez zespół studentów Uniwersytetu Gdańskiego:
-Julia Goska
-Aleksandra Buńko 
-© 2026 Solar Invest Project.
+© 2026 Solar Invest Project
