@@ -84,7 +84,7 @@ python -m streamlit run app2.py
 Aplikacja otworzy się automatycznie w przeglądarce pod adresem http://localhost:8501.
 
 Struktura Plików
-app2.py - Główny plik aplikacji (Production Ready).
-analiza-projekt.ipynb - Notatnik Jupyter z analizą wstępną i testami API (Development).
-requirements.txt - Lista zależności projektowych.
-.streamlit/config.toml - Konfiguracja motywu graficznego (kolory, fonty).
+- app2.py - Główny plik aplikacji (Production Ready).
+- analiza-projekt.ipynb - Notatnik Jupyter z analizą wstępną i testami API (Development).
+- requirements.txt - Lista zależności projektowych.
+- .streamlit/config.toml - Konfiguracja motywu graficznego (kolory, fonty).
