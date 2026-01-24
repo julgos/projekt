@@ -4,8 +4,9 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![Folium](https://img.shields.io/badge/Folium-77B829?style=for-the-badge&logo=leaflet&logoColor=white)
 ![Open-Meteo](https://img.shields.io/badge/API-Open--Meteo-orange?style=for-the-badge)
-
+---
 **Nazwa pełna** System Analizy Rentowności Instalacji Fotowoltaicznej
+
 **Nazwa skrócona** Solar Invest
 ---
 
